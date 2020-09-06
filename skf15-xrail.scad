@@ -152,15 +152,28 @@ module frame()
 
 //Tz(SKF_LLTHC_U15[SKF_H1])
 
-difference()
+
+ difference()
 {
-    cub([50,50,10]);
-    Tx(-330) union()
+    hull() Tz(-4) cub([50,50,12], align=TOP, at=LEFT+BOTTOM,bevel=[4,-4,0]) cub([50,50,12], align=TOP+LEFT, bevel=[4,-4,0]);
+    
+    Tx(-40)
+    #My(32) cyl([6.3, 6.3, 100]);
+   
+    Tx(-60)
+    #My(32) cyl([6.3, 6.3, 100]);
+    
+    Tx(-330) 
+    union()
     {
         skf_assembly();
-        Mx(660) Rx(180) nema(mask=1);
+        Mx(660) Rx(180) nema(mask=[1,1,2]);
     }
 }
+{
+    Rx(180) %nema();
+    Tx(-330) %skf_assembly();
+}       
 // PICK one
 //color ("red") reinforce();
 //color ("#9999FFAA") model();
