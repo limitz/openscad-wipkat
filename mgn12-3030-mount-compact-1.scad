@@ -1,4 +1,5 @@
-include <shorthand.scad>
+include <openscad-shorthand/shorthand.scad>
+include <openscad-shorthand/nema.scad>
 
 module rail(keepouts=1)
 {
