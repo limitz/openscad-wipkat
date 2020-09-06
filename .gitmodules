@@ -1,0 +1,6 @@
+[submodule "openscad-shorthand"]
+	path = openscad-shorthand
+	url = git@github.com:limitz/openscad-shorthand
+[submodule "openscad-skf"]
+	path = openscad-skf
+	url = git@github.com:limitz/openscad-skf
